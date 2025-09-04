@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>From Fabs to Labs (Instrumentation) | White Paper Draft</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --ink:#2c3e50; --ink-2:#34495e;
+      --text:#333; --bg:#fff; --rule:#e8e8e8;
+      --link:#1e6fdd;
+    }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family:Arial, sans-serif; line-height:1.6; color:var(--text); background:var(--bg); }
+    header { background:var(--ink); color:#fff; text-align:center; padding:20px; }
+    header h1 { margin:0; font-size:26px; }
+    header p { margin:6px 0; }
+    nav { position:sticky; top:0; z-index:10; background:var(--ink-2); display:flex; flex-wrap:wrap; justify-content:center; }
+    nav a { color:#fff; text-decoration:none; padding:10px 14px; font-size:14px; }
+    nav a:hover { background:var(--ink); }
+    main { max-width:1000px; margin:36px auto; padding:0 20px 60px; }
+    .section { margin-bottom:40px; }
+    .section h2 { color:var(--ink); border-bottom:2px solid var(--rule); padding-bottom:4px; }
+    ul { margin-top:8px; }
+    li { margin:6px 0; }
+    .back-top { display:block; margin-top:12px; font-size:14px; }
+    .back-top a { color:var(--link); text-decoration:none; }
+    .back-top a:hover { text-decoration:underline; }
+    .meta { font-style:italic; margin-bottom:12px; }
+  </style>
+</head>
+<body>
+<a id="top"></a>
+<header>
+  <h1>From Fabs to Labs (Instrumentation)</h1>
+  <p class="meta">Turning Supplier Accountability, Agentic AI, and Predictive Surveillance into a MedTech Quality Advantage</p>
+  <p>Author: Joshua Prickett, D.C.S. | Status: NDA-safe draft (examples anonymized)</p>
+  <p>Purpose: Give Abbott executives a practical, low-risk path to pilot semiconductor-proven practices.<br>
+  Thesis: Telemetry + governance turns compliance from a cost center into a competitive moat.</p>
+</header>
+
+<nav>
+  <a href="#execsum">Executive Summary</a>
+  <a href="#s1">1) Supplier</a>
+  <a href="#s2">2) CAPA AI</a>
+  <a href="#s3">3) Surveillance</a>
+  <a href="#s4">4) Governance</a>
+  <a href="#s5">5) Pilot Plan</a>
+  <a href="#s6">6) Metrics</a>
+  <a href="#s7">7) Risks</a>
+  <a href="#s8">8) Roles</a>
+  <a href="#s9">9) Recommendation</a>
+  <a href="#s10">10) Credentials</a>
+  <a href="#appendix">Appendices</a>
+</nav>
+
+<main>
+  <section class="section" id="execsum">
+    <h2>Executive Summary</h2>
+    <p>MedTech firms promise safe, reliable devices, yet many still verify vendor performance and complaint handling after the fact. In semiconductors, we closed that gap by wiring part-level telemetry into contracts, installing agentic AI with guardrails for prioritization, and scaling predictive monitoring across global factories. The result: faster triage, earlier detection, enforceable supplier quality, and auditable evidence on tap. This paper translates those patterns to MedTech with a 90-day pilot plan for Abbott.</p>
+    <ul>
+      <li>Supplier accountability: Real-time vendor scorecards; contract enforcement anchored in telemetry; material savings via defect attribution.</li>
+      <li>CAPA triage: 15–50% faster classification and routing with an explainable, governed prioritization engine.</li>
+      <li>Post-market surveillance: Earlier signal detection and lower alert fatigue through constraint-aware anomaly ranking.</li>
+      <li>Compliance by construction: Evidence capture aligned to IEC 62304, ISO 14971, ISO 13485, and 21 CFR 820.</li>
+    </ul>
+    <blockquote>“The biggest transformation in prioritization logic in the last two decades.” — Senior executive (anonymized)</blockquote>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s1">
+    <h2>1) Supplier Accountability as a Quality Revolution</h2>
+    <p><strong>The semiconductor lesson</strong></p>
+    <ul>
+      <li>Enforceable specs: Wafer/part-level telemetry tied failures directly to vendor limits.</li>
+      <li>Contract leverage: Hard evidence drove $10M+ in renegotiations and ongoing scorecard pressure.</li>
+      <li>Lifecycle ownership: Monthly reviews traced root cause, owner, fix status, and effectiveness checks.</li>
+    </ul>
+    <p><strong>Why MedTech needs this now</strong></p>
+    <ul>
+      <li>After-the-fact audits, manual CAPA spreadsheets, and vendor promises that are hard to verify.</li>
+      <li>Replace them with continuous accountability and enforceable KPIs.</li>
+    </ul>
+    <p><strong>MedTech-ready vendor KPIs (examples):</strong></p>
+    <ul>
+      <li>Defect density by severity: ≤X Sev-1 per release; zero Sev-1 at launch.</li>
+      <li>Time-to-fix: Sev-1 ≤ 48h; Sev-2 ≤ 5 days.</li>
+      <li>Change control: 100% of vendor code via validated pipelines with reproducible builds.</li>
+      <li>Security hygiene: Zero known CVEs at release; 100% SBOM completeness.</li>
+      <li>Lifecycle tracking: Root cause, ownership, fix status, effectiveness checks monthly.</li>
+    </ul>
+    <p>[Figure 1: Vendor KPI Scorecard Pipeline]</p>
+    <p><strong>Contract hooks:</strong> Tie remediation timelines, holdbacks, and preferred supplier status to KPI thresholds. Evidence auto-collected by the platform.</p>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s2">
+    <h2>2) Agentic AI with Guardrails for CAPA Prioritization</h2>
+    <p><strong>The semiconductor lesson:</strong> We consolidated 50+ priority models into a governed C# aggregator with categories, executive controls, and shadow mode. Decisions were explainable by design. Impact: queue-time variability down 25–50%, utilization up ~15%.</p>
+    <p><strong>The MedTech translation:</strong></p>
+    <ul>
+      <li>Weighted routing across safety, compliance, reliability, and cost (safety dominates).</li>
+      <li>Governed limits cap noisy sources.</li>
+      <li>Shadow mode for new classifiers until RA/QA approval.</li>
+      <li>Separation of duties: developers vs RA/QA vs operations.</li>
+      <li>Explainability: each decision shows which signals/weights drove the outcome.</li>
+    </ul>
+    <p>[Figure 2: CAPA Prioritization Engine]</p>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s3">
+    <h2>3) Predictive Modeling for Post-Market Surveillance</h2>
+    <p><strong>The semiconductor lesson:</strong> We operationalized 25+ production ML systems for real-time surveillance with weekly threshold tuning and audit-ready persistence.</p>
+    <p><strong>The MedTech translation:</strong> Use constraint-aware anomaly ranking to elevate potential patient-impact signals first while controlling false positives.</p>
+    <ul>
+      <li>Multi-signal overlays: device logs + assay results + safe proxies.</li>
+      <li>Weekly RA/QA reviews tune thresholds.</li>
+      <li>Shadow mode for new models.</li>
+      <li>Persistence & KPIs: every decision logged, dashboards show drivers.</li>
+    </ul>
+    <p>[Figure 3: Post-Market Surveillance Data Flow]</p>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s4">
+    <h2>4) Architecture &amp; Governance (Compliance by Construction)</h2>
+    <ul>
+      <li>Auditability by default: immutable logs of data lineage, versions, approvals.</li>
+      <li>Least-privilege access; SBOM and CVE tracking at release gates.</li>
+      <li>Standards alignment: IEC 62304, ISO 14971, ISO 13485, 21 CFR 820.</li>
+      <li>Human-in-the-loop: oversight boards own promotions and emergency brakes.</li>
+    </ul>
+    <p>[Figure 4: Evidence Model]</p>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s5">
+    <h2>5) 90-Day Pilot Plan for Abbott Instrumentation</h2>
+    <p><strong>Goal:</strong> Prove value with low disruption; generate board-ready metrics.</p>
+    <p><strong>Scope option A — Supplier accountability:</strong> 1–2 vendors, 2–3 KPIs, scorecard, monthly review with legal/procurement.</p>
+    <p><strong>Scope option B — CAPA triage:</strong> Ingest 6–12 months of complaints, configure weighted signals, enable shadow mode, compare routing vs live.</p>
+    <p><strong>Scope option C — Post-market surveillance:</strong> Pick one instrument line, deploy anomaly ranking, weekly RA/QA reviews.</p>
+    <p><strong>Milestones:</strong> Week 2 plumbing; Week 6 shadow dashboards; Week 10 metric readout; Week 12 exec brief.</p>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s6">
+    <h2>6) Metrics &amp; ROI</h2>
+    <ul>
+      <li>Supplier: contract adjustments, escape rate, closure time.</li>
+      <li>CAPA: classification time, backlog age, percent surfaced safety items.</li>
+      <li>Surveillance: signal-to-noise, lead time, complaint volume by tier.</li>
+      <li>Compliance: evidence completeness, audit findings, cycle time.</li>
+    </ul>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s7">
+    <h2>7) Risks &amp; Mitigations</h2>
+    <ul>
+      <li>Data quality gaps → start narrow scope, add gates at ingestion.</li>
+      <li>Model drift → weekly review/retrain, capture versions.</li>
+      <li>Workflow disruption → shadow mode first, training, rollback.</li>
+      <li>Vendor resistance → phased KPIs, improvement roadmaps.</li>
+    </ul>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s8">
+    <h2>8) Implementation Roles</h2>
+    <ul>
+      <li>Executive sponsor: sets policy for governed limits.</li>
+      <li>RA/QA lead: owns promotions, audit mapping, evidence completeness.</li>
+      <li>Data/Platform lead: builds telemetry pipelines, dashboards, traceability.</li>
+      <li>Operations lead: integrates routing, closes loop.</li>
+      <li>Legal/Procurement: aligns contracts to scorecard metrics.</li>
+    </ul>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s9">
+    <h2>9) What Abbott Can Pilot First (Recommendation)</h2>
+    <p>Start with Supplier Accountability (Scope A) on a narrow vendor set where KPIs are measurable on day one. Pair with a CAPA shadow-mode triage to generate early wins and visible evidence without risk to safety workflows.</p>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="s10">
+    <h2>10) Author Credentials (brief)</h2>
+    <ul>
+      <li>Led cross-site prioritization framework unifying 50+ models with governance and explainability.</li>
+      <li>Built supplier-defect genealogy and telemetry powering $10M+ in savings.</li>
+      <li>Scaled 25+ production ML systems for predictive monitoring with audit-ready persistence.</li>
+    </ul>
+    <p><em>All examples anonymized; no confidential Intel or Abbott information disclosed.</em></p>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+
+  <section class="section" id="appendix">
+    <h2>Appendices</h2>
+    <p><strong>Appendix A — Draft KPI Dictionary</strong>: Vendor defect density, time-to-fix, SBOM completeness, change-control adherence.</p>
+    <p><strong>Appendix B — Evidence Mappings</strong>: IEC 62304, ISO 14971, ISO 13485 / 21 CFR 820.</p>
+    <p><strong>Appendix C — Figures</strong>: Figure 1 KPI Pipeline, Figure 2 CAPA Engine, Figure 3 Surveillance Flow, Figure 4 Evidence Model.</p>
+    <span class="back-top"><a href="#top">Back to top ↑</a></span>
+  </section>
+</main>
+</body>
+</html>
